@@ -1,3 +1,4 @@
 .stack-work/
 wolfbot.cabal
 *~
+.DS_Store

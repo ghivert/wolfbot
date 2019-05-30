@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Work+Sans:100,200,300,400,500,600,700,800,900|Roboto');
+
+:root {
+  --google-blue: #4285F4;
+  --wolfox-blue: #3f18dc;
+  --grey: #0D0D0D;
+  --shadow: 0 5px 15px rgba(0,0,0,.15);
+  --zero: 0px;
+}
+
+body {
+  background: var(--wolfox-blue);
+  font-family: Montserrat;
+}
+
+main {
+  background: right / cover url('/banner.png') no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login {
+  font-family: Open Sans;
+  background-color: white;
+  border-radius: 6px;
+  padding: 60px;
+  text-align: center;
+  color: var(--grey);
+  box-shadow: var(--shadow);
+}
+
+.login h1 {
+  font-weight: 700;
+}
+
+.login img {
+  width: 100px;
+}
+
+.google-log-in {
+  background: var(--google-blue);
+  font-family: Roboto;
+  border-radius: 4px;
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 18px;
+}
+
+.google-log-in img {
+  width: auto;
+  margin-right: 18px;
+}

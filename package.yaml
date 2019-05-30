@@ -26,6 +26,8 @@ dependencies:
 - http-types
 - clay
 - text
+- wai
+- wai-middleware-static
 
 library:
   source-dirs: src
