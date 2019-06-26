@@ -21,6 +21,10 @@ main {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .login {
   font-family: Open Sans;
   background-color: white;
@@ -37,6 +41,11 @@ main {
 
 .login img {
   width: 100px;
+}
+
+.google-log-in-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .google-log-in {
