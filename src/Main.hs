@@ -9,10 +9,13 @@ import Network.Wai.Middleware.Static
 import System.Environment
 import Views.Homepage
 import qualified Views.NotFound as NotFound
+import Database
+import Database.PostgreSQL.Simple (Connection)
+import Models.User
 
-startServer :: Int -> IO ()
-startServer port = scotty port $ do
-  middleware $ staticPolicy (addBase "public")
+startServer :: Connection -> Int -> IO ()
+startServer conn port = scotty port $ do
+  middleware $ staticPolicy $ addBase "public"
   get "/" $ html $ renderHtml homepage
   notFound $ do
     status notFound404
@@ -24,6 +27,7 @@ errorMessage = putStrLn . (++) "Unable to start the server on port: "
 main :: IO ()
 main = do
   stringPort <- getEnv "PORT"
+  conn <- connectToDB
   let printError = errorMessage stringPort
       port = readMaybe stringPort in
-    maybe printError startServer port
+    maybe printError (startServer conn) port
